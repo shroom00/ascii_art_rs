@@ -13,6 +13,7 @@ Usage is as follows: `ascii_art_rs.exe -i img.jpg -o img_ascii.png -s 10000 --he
     --width <NUMBER>      The width of the output image.
     --height <NUMBER>     The height of the output image. [default: 1000]
     --chars <CHARACTERS>  The characters you want to be used in output image. (Defaults to visible ASCII characters)
+    --colour              Uses accurate colours when specified, instead of grayscale.
 -h, --help                Print help
 -V, --version             Print version
 ```
@@ -20,6 +21,8 @@ Usage is as follows: `ascii_art_rs.exe -i img.jpg -o img_ascii.png -s 10000 --he
 ### Usage Notes
 
 The only required argument is `-i`.
+
+`--colour` takes no values, it's a boolean flag.
 
 The width/height arguments are mutually exclusive. This is because the aspect ratio of the image is preserved, so the height is dependent on the width and vice versa.
 
@@ -32,7 +35,7 @@ This was obtained with the following command, using [this](https://commons.wikim
 ## TODO
 
 - If the output width/height is larger than the desktop width/height, scale the window size so it fits entirely on the desktop.
-- Add an argument for accurate colours, as opposed to grayscale.
+- ~~Add an argument for accurate colours, as opposed to grayscale.~~
 - Add a non-GUI argument for true commandline use.
 - Add arguments for minimum and maximum character sizes.
 - Add an argument to place characters in grids/cells, rather than random placement.
